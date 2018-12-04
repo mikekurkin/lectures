@@ -1,0 +1,1800 @@
+<!DOCTYPE html><html>
+
+<head>
+<meta charset="utf-8">
+<title>7_bzd</title>
+<style>
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAYcAA0AAAAACjQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABMAAAABwAAAAca8vGTk9TLzIAAAFMAAAARAAAAFZG1VHVY21hcAAAAZAAAAA+AAABQgAP9AdjdnQgAAAB0AAAAAQAAAAEACICiGdhc3AAAAHUAAAACAAAAAj//wADZ2x5ZgAAAdwAAADRAAABEKyikaNoZWFkAAACsAAAAC0AAAA2AtXoA2hoZWEAAALgAAAAHAAAACQHngNFaG10eAAAAvwAAAAQAAAAEAwAACJsb2NhAAADDAAAAAoAAAAKALIAVG1heHAAAAMYAAAAHwAAACABEAB2bmFtZQAAAzgAAALBAAAFu3I9x/Nwb3N0AAAF/AAAAB0AAAAvaoFvbwAAAAEAAAAAzBdyYwAAAADP2IQvAAAAAM/bz7t4nGNgZGFgnMDAysDB1Ml0hoGBoR9CM75mMGLkYGBgYmBlZsAKAtJcUxgcPsR8iGF2+O/AEMPsznAYKMwIkgMA5REMOXicY2BgYGaAYBkGRgYQsAHyGMF8FgYFIM0ChED+h5j//yEk/3KoSgZGNgYYk4GRCUgwMaACRoZhDwCs7QgGAAAAIgKIAAAAAf//AAJ4nHWMMQrCQBBF/0zWrCCIKUQsTDCL2EXMohYGSSmorScInsRGL2DOYJe0Ntp7BK+gJ1BxF1stZvjz/v8DRghQzEc4kIgKwiAppcA9LtzKLSkdNhKFY3HF4lK69ExKslx7Xa+vPRVS43G98vG1DnkDMIBUgFN0MDXflU8tbaZOUkXUH0+U27RoRpOIyCKjbMCVejwypzJJG4jIwb43rfl6wbwanocrJm9XFYfskuVC5K/TPyczNU7b84CXcbxks1Un6H6tLH9vf2LRnn8Ax7A5WQAAAHicY2BkYGAA4teL1+yI57f5ysDNwgAC529f0kOmWRiYVgEpDgYmEA8AUzEKsQAAAHicY2BkYGB2+O/AEMPCAAJAkpEBFbAAADgKAe0EAAAiAAAAAAQAAAAEAAAAAAAAKgAqACoAiAAAeJxjYGRgYGBhsGFgYgABEMkFhAwM/xn0QAIAD6YBhwB4nI1Ty07cMBS9QwKlQapQW3VXySvEqDCZGbGaHULiIQ1FKgjWMxknMfLEke2A+IJu+wntrt/QbVf9gG75jK577Lg8K1qQPCfnnnt8fX1NRC/pmjrk/zprC+8D7tBy9DHgBXoWfQ44Av8t4Bj4Z8CLtBL9CniJluPXASf0Lm4CXqFX8Q84dOLnMB17N4c7tBo1AS/Qi+hTwBH4rwHHwN8DXqQ30XXAS7QaLwSc0Gn8NuAVWou/gFmnjLrEaEh9GmDdDGgL3B4JsrRPDU2hTOiMSuJUIdKQQayiAth69r6akSSFqIJuA19TrzCIaY8sIoxyrNIrL//pw7A2iMygkX5vDj+G+kuoLdX4GlGK/8Lnlz6/h9MpmoO9rafrz7ILXEHHaAx95s9lsI7AHNMBWEZHULnfAXwG9/ZqdzLI08iuwRloXE8kfhXYAvE23+23DU3t626rbs8/8adv+9DWknsHp3E17oCf+Z48rvEQNZ78paYM38qfk3v/u3l3u3GXN2Dmvmvpf1Srwk3pB/VSsp512bA/GG5i2WJ7wu430yQ5K3nFGiOqgtmSB5pJVSizwaacmUZzZhXLlZTq8qGGFY2YcSkqbth6aW1tRmlaCFs2016m5qn36SbJrqosG4uMV4aP2PHBmB3tjtmgN2izkGQyLWprekbIntJFing32a5rKWCN/SdSoga45EJykyQ7asZvHQ8PTm6cslIpwyeyjbVltNikc2HTR7YKh9LBl9DADC0U/jLcBZDKrMhUBfQBvXRzLtFtjU9eNHKin0x5InTqb8lNpfKv1s1xHzTXRqgKzek/mb7nB8RZTCDhGEX3kK/8Q75AmUM/eLkfA+0Hi908Kx4eNsMgudg5GLdRD7a84npi+YxNr5i5KIbW5izXas7cHXIMAau1OueZhfj+cOcP3P8MNIWLyYOBuxL6DRylJ4cAAAB4nGNgYoAALjDJyIAOWMCiTIxMLDmZedkABtIBygAAAA==) format('woff');
+}
+
+body {
+  background-color: white;
+}
+
+.markdown-body {
+  min-width: 200px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px;
+
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;;word-wrap: break-word; word-break: break-all;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .anchor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body .highlight {
+  background: #fff;
+}
+
+.markdown-body .highlight .mf,
+.markdown-body .highlight .mh,
+.markdown-body .highlight .mi,
+.markdown-body .highlight .mo,
+.markdown-body .highlight .il,
+.markdown-body .highlight .m {
+  color: #945277;
+}
+
+.markdown-body .highlight .s,
+.markdown-body .highlight .sb,
+.markdown-body .highlight .sc,
+.markdown-body .highlight .sd,
+.markdown-body .highlight .s2,
+.markdown-body .highlight .se,
+.markdown-body .highlight .sh,
+.markdown-body .highlight .si,
+.markdown-body .highlight .sx,
+.markdown-body .highlight .s1 {
+  color: #df5000;
+}
+
+.markdown-body .highlight .kc,
+.markdown-body .highlight .kd,
+.markdown-body .highlight .kn,
+.markdown-body .highlight .kp,
+.markdown-body .highlight .kr,
+.markdown-body .highlight .kt,
+.markdown-body .highlight .k,
+.markdown-body .highlight .o {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .kt {
+  color: #458;
+}
+
+.markdown-body .highlight .c,
+.markdown-body .highlight .cm,
+.markdown-body .highlight .c1 {
+  color: #998;
+  font-style: italic;
+}
+
+.markdown-body .highlight .cp,
+.markdown-body .highlight .cs {
+  color: #999;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .cs {
+  font-style: italic;
+}
+
+.markdown-body .highlight .n {
+  color: #333;
+}
+
+.markdown-body .highlight .na,
+.markdown-body .highlight .nv,
+.markdown-body .highlight .vc,
+.markdown-body .highlight .vg,
+.markdown-body .highlight .vi {
+  color: #008080;
+}
+
+.markdown-body .highlight .nb {
+  color: #0086B3;
+}
+
+.markdown-body .highlight .nc {
+  color: #458;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .no {
+  color: #094e99;
+}
+
+.markdown-body .highlight .ni {
+  color: #800080;
+}
+
+.markdown-body .highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .nf {
+  color: #945277;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .nn {
+  color: #555;
+}
+
+.markdown-body .highlight .nt {
+  color: #000080;
+}
+
+.markdown-body .highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+.markdown-body .highlight .gd {
+  color: #000;
+  background-color: #fdd;
+}
+
+.markdown-body .highlight .gd .x {
+  color: #000;
+  background-color: #faa;
+}
+
+.markdown-body .highlight .ge {
+  font-style: italic;
+}
+
+.markdown-body .highlight .gr {
+  color: #aa0000;
+}
+
+.markdown-body .highlight .gh {
+  color: #999;
+}
+
+.markdown-body .highlight .gi {
+  color: #000;
+  background-color: #dfd;
+}
+
+.markdown-body .highlight .gi .x {
+  color: #000;
+  background-color: #afa;
+}
+
+.markdown-body .highlight .go {
+  color: #888;
+}
+
+.markdown-body .highlight .gp {
+  color: #555;
+}
+
+.markdown-body .highlight .gs {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .gu {
+  color: #800080;
+  font-weight: bold;
+}
+
+.markdown-body .highlight .gt {
+  color: #aa0000;
+}
+
+.markdown-body .highlight .ow {
+  font-weight: bold;
+}
+
+.markdown-body .highlight .w {
+  color: #bbb;
+}
+
+.markdown-body .highlight .sr {
+  color: #017936;
+}
+
+.markdown-body .highlight .ss {
+  color: #8b467f;
+}
+
+.markdown-body .highlight .bp {
+  color: #999;
+}
+
+.markdown-body .highlight .gc {
+  color: #999;
+  background-color: #EAF2F5;
+}
+
+.markdown-body .octicon {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  float: left;
+  margin: 0.3em 0 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+
+
+
+</style>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script>
+<style> @media print{ code[class*="language-"],pre[class*="language-"]{overflow: visible; word-wrap: break-word !important;} }</style></head><body><div class="markdown-body">
+<h1 id="toc_0">Безопасность жизнедеятельности</h1>
+
+<ul>
+<li>
+<a href="#toc_0">Безопасность жизнедеятельности</a>
+<ul>
+<li>
+<a href="#toc_1">Принципы обеспечения безопасности</a>
+<ul>
+<li>
+<a href="#toc_2">Риски. Виды рисков</a>
+</li>
+<li>
+<a href="#toc_3">Основные концепции развития техносферы</a>
+</li>
+<li>
+<a href="#toc_4">Принципы формирования техносферы</a>
+</li>
+<li>
+<a href="#toc_5">Физические негативные факторы</a>
+</li>
+<li>
+<a href="#toc_6">Химические негативные факторы</a>
+<ul>
+<li>
+<a href="#toc_7">Нормирование негативных факторов.</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_8">Основные принципы защиты от опасностей</a>
+<ul>
+<li>
+<a href="#toc_9">Методы обеспечения безопасности</a>
+</li>
+<li>
+<a href="#toc_10">Основные принципы защиты от физических полей</a>
+</li>
+<li>
+<a href="#toc_11">Защита от вибрации</a>
+<ul>
+<li>
+<a href="#toc_12">Методы защиты от вибрации</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_13">Защита от воздействия магнитных полей</a>
+</li>
+<li>
+<a href="#toc_14">Защита от лазерного излучения</a>
+<ul>
+<li>
+<a href="#toc_15">Меры защиты</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_16">Меры защиты от инфракрасного излучения</a>
+</li>
+<li>
+<a href="#toc_17">Устройства для защиты от поражения электрическим током</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_18">Виды и условия трудовой деятельности</a>
+</li>
+<li>
+<a href="#toc_19">Эргономические основы безопасности</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_20">Чрезвычайные ситуации</a>
+<ul>
+<li>
+<a href="#toc_21">ЧС природного и техногенного характера</a>
+</li>
+<li>
+<a href="#toc_22">ЧС техногенного характера</a>
+</li>
+<li>
+<a href="#toc_23">ЧС при авариях на химически опасных объектах</a>
+</li>
+<li>
+<a href="#toc_24">Защита населения в экстремальных и чрезвычайных ситуациях</a>
+</li>
+<li>
+<a href="#toc_25">Устойчивость функционирования объектов экономики в чрезвычайных ситуациях</a>
+</li>
+<li>
+<a href="#toc_26">Пожары, взрывы</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<hr/>
+
+<p>Четыре взаимодействия в системе «Человек–среда обитания»:</p>
+
+<ol>
+<li>Комфортное (оптимальное)</li>
+<li>Допустимое</li>
+<li>Опасное</li>
+<li>Чрезвычайно опасное</li>
+</ol>
+
+<p><strong>Опасность</strong> — это негативное свойство живой и неживой материи, способное причинять ущерб самой материи — людям, среде или материальным ценностям. Различают опасности естественные и искусственные.</p>
+
+<p><strong>Вредный фактор</strong> — это негативное воздействие на человека, которое приводит к ухудшению самочувствия или заболевания.</p>
+
+<p>Травмирующий фактор приводит к травмам или летальному исходу.</p>
+
+<p>Законы:</p>
+
+<ul>
+<li>Об охране окружающей среды (2002 г.);</li>
+<li>О санитарно-эпидемиологическом благополучии населения;</li>
+<li>О недрах;</li>
+<li>Об экологической экспертизе;</li>
+<li>О защите населения и территорий от чрезвычайных ситуаций природного и техногенного характера;</li>
+<li>О пожарной безопасности;</li>
+<li>и т. д.</li>
+</ul>
+
+<p>Санитарные нормы устанавливают предельно допустимую концентрацию загрязняющих веществ в воздухе и воде различного назначения, а также предельные уровни средних воздействий на окружающую среду.</p>
+
+<h2 id="toc_1">Принципы обеспечения безопасности</h2>
+
+<p><strong>Гомосфера</strong> — это пространство (рабочая зона), где находится человек в процессе рассматриваемой деятельности.</p>
+
+<p><strong>Ноксосфера</strong> — пространство, в котором постоянно существует или периодически возникает опасность.</p>
+
+<p>Обеспечение безопасности достигается тремя основными методами:</p>
+
+<ul>
+<li>А. Пространственное и / или временное разделение гомо- и ноксосферы;</li>
+<li>Б. Нормализация ноксосферы путём исключения опасности;</li>
+<li>В. Комплекс приёмов и средств, направленных на адаптацию человека к соответствующей среде и повышению его защищённости.</li>
+</ul>
+
+<p>При оценке допустимости воздействия вредных факторов на организм человека исходят из биологического закона субъективной количественной оценки раздражителя Вебера – Фехнера. Он выражает связь между измерением интенсивности раздражителя и силой вызванного ощущения. На базе закона Вебера – Фехнера построено нормирование вредных факторов. Чтобы исключить необратимые биологические эффекты воздействие факторов ограничивается предельно допустимыми уровнями или предельно допустимой концентрацией. Это максимальное значение фактора, которое, воздействуя на человека (изолировано или в сочетании с другими факторами), не вызывает у него и у его потомства биологических изменений, даже скрытых и временно компенсируемых.</p>
+
+<p><strong>Таксономия</strong> — наука о классификации и систематизации сложных явлений, понятий, объектов. По происхождению различают шесть групп опасностей: природные, техногенные, антропогенные, экологические, социальные и биологические. По характеру воздействия на человека опасности можно разделить на пять групп: механические, физические, химические, биологические и психофизиологические. По времени проявления отрицательных последствий — на импульсивные и кумулятивные. По локализации — связанные с литосферой, гидросферой, атмосферой и космосом. По вызываемым последствиям — утомление, заболевание, травмы, аварии, летальные исходы и т. д. По приносимому ущербу — социальный, технический, экологический, экономический. По структуре опасности — простые и производные. Сфера проявления опасности — бытовая, спортивная, дорожно-транспортная, производственная, военная и т. д. По реализуемой энергии — активные и пассивные. К пассивным относятся опасности, активизирующиеся за счёт энергии, носителем которой является человек. Различают априорные (предвестники) и апостериорные (следы) опасности.</p>
+
+<p><strong>Квантификация</strong> — введение количественных характеристик для оценки сложных качественно определяемых понятий.</p>
+
+<p><strong>Риск</strong> — это частота реализации опасности.</p>
+
+<hr/>
+
+<h3 id="toc_2">Риски. Виды рисков</h3>
+
+<ul>
+<li>Приемлемый (допустимый) — это минимальная величина риска, которая достижима по техническим, экономическим и технологическим возможностям;</li>
+<li>Мотивированный — превышающий приемлемый и обоснованный мотивами, связанными с предотвращением аварии или спасением людей или материальных ценностей;</li>
+<li><p>Немотивированный — превышающий приемлемый и не обоснованный действиями, связанными с предотвращением аварии или спасением людей и материальных ценностей.</p></li>
+<li><p>Антропогенный риск — это сочетание вероятностей и последствий наступления неблагоприятного события, обусловленного жизнью и деятельностью человека;</p></li>
+<li><p>Индивидуальный риск — это сочетание вероятностей и последствий наступления неблагоприятного события для личности;</p></li>
+<li><p>Коллективный риск (социальный) — риск появления опасности того или иного вида для коллектива, группы людей, определённой социальной группы;</p></li>
+<li><p>Профессиональный — индивидуальный риск, связанный с профессиональной деятельностью человека;</p></li>
+<li><p>Экологический — связанный с воздействием на природную среду.</p></li>
+</ul>
+
+<p>Риск можно посчитать по формуле: \[РИСК = \frac{ПОСЛЕДСТВИЕ}{СОБЫТИЕ}\]</p>
+
+<p><code>ISO 14001 (Р ИСО 14001-98)</code> — система управления окружающей средой. Требования, руководства по применению. Под устойчивым понимают такое развитие общества и хозяйства, при котором не нарушалась бы природная основа этого развития.</p>
+
+<p>Различают следующие типы опасных и вредных факторов техносферы для человека и природной среды:</p>
+
+<ul>
+<li>биологические;</li>
+<li>химические;</li>
+<li>физические;</li>
+<li>психофизиологические.</li>
+</ul>
+
+<h3 id="toc_3">Основные концепции развития техносферы</h3>
+
+<ol>
+<li>Ноосферные законы (самостоятельное рассмотрение). Не познаны человечеством, не позволят человеку уничтожить природу Земли, ноосфера будет жёстко регулировать как численность населения на Земле, так и другие действия человеческой цивилизации, направленные на разрушение природы Земли;</li>
+<li>Полное уничтожение природы Земли в процессе развития техносферы и создание искусственной среды обитания, предназначенной, прежде всего, для человека;</li>
+<li>Гармоническое развитие техносферы во взаимодействии с природой Земли;</li>
+</ol>
+
+<h3 id="toc_4">Принципы формирования техносферы</h3>
+
+<ol>
+<li>Приоритетность вопросов безопасности и сохранения природы при её формировании;</li>
+<li>Архитектурно-планировочное зонирование территорий на селитерные, промышленные и рекреационно-парковые зоны, транспортные узлы;</li>
+<li>Долгосрочное планирование её развития (градостроительный план);</li>
+<li>Минимизация опасных и вредных факторов за счёт комплексной и экологической логистики жизненного цикла материальных потоков;</li>
+</ol>
+
+<p><strong>Логистика</strong> — это наука о планировании, организации, управлении, контроле, регулировании движения, материальных и информационных потоков в производстве в пространстве и во времени от их первичного источника до конечного потребителя.</p>
+
+<p><strong>Экологическая логистика</strong> — это наука и комплекс мер, которая обеспечивает движение материала при осуществлении любых производственных процессов вплоть до его превращения в товар и отходы производства с последующим доведением отходов до утилизации или до безопасного хранения в окружающей среде, а также сбор и сортировку отходов потребления, их транспортировку, утилизацию или безопасное хранение в окружающей среде.</p>
+
+<h3 id="toc_5">Физические негативные факторы</h3>
+
+<p>Включают в себя механически-опасные факторы, ионизирующие и не ионизирующие излучения, микроклимат рабочей зоны, производственный шум (включая ультра- и инфразвук), вибрация, освещение, и различные виды энергии.</p>
+
+<p><strong>Шум</strong> — это беспорядочное сочетание звуков различной частоты и интенсивности. Физические параметры шума — звуковое давление, уровень звукового давления, интенсивность звука.</p>
+
+<p>Действие шума на организм. При интенсивном и длительном воздействии шума наступает перенапряжение центральной нервной системы. В результате появляется головная боль, шум и боль в ушах, головокружение, гипертония, гастриты.</p>
+
+<p>Действие инфразвука (≤ 20 Hz) на человека — снижение работоспособности, изменения в сердечно-сосудистой, дыхательной системах организма, раздражительность, рассеянность, головокружение.</p>
+
+<p>Действие ультразвука (≥ 20 kHz) на человека — поражение нервного и суставного аппарата, функциональные изменения нервной и сердечно-сосудистой систем.</p>
+
+<p><strong>Вибрация</strong> — это малые механические колебания, возникающие в упругих телах под воздействием временных сил. Под воздействием вибрации происходят изменения в нервной, сердечно-сосудистой и костно-суставной системах. Вредное воздействие вибрации выражается в виде повышенного утомления, головной боли, боли в суставах костей и пальцев рук, повышенной раздражительности и нарушении координации движений.</p>
+
+<p>Не ионизирующие электромагнитные поля вызывают нарушение функционального состояния нервной, сердечно-сосудистой систем, утомление организма, ухудшение памяти, депрессия, вялость и головные боли.</p>
+
+<p>Ионизирующее излучение (альфа, бета, гамма) вызывает мутации.</p>
+
+<p>Освещение бывает естественное и искусственное. Чаще всего — комбинированное.</p>
+
+<p>Электротравмы вызывают до 80% смертности. Действие электрического тока на организм человека — термическое (ожоги, нагрев внутренних органов и т. д.), электролитическое, механическое, биологическое (спазм, возбуждение).</p>
+
+<p>Электрические удары делятся на четыре степени.</p>
+
+<ol>
+<li>Судорожное сокращение мышц без потери сознания;</li>
+<li>Судорожное сокращение мышц, потеря сознания;</li>
+<li>Потеря сознание, сбой сердца и / или дыхания;</li>
+<li>Клиническая смерть.</li>
+</ol>
+
+<hr/>
+
+<h3 id="toc_6">Химические негативные факторы</h3>
+
+<p>Это химически активные вещества, оказывающие на человека токсическое, канцерогенное, мутагенное действие, влияющее на репродуктивную функцию. </p>
+
+<p><strong>Вредные вещества</strong> — это те вещества, которые при контакте с организмом человека могут вызвать производственные травмы, профессиональные заболевания или отклонения в состоянии здоровья, обнаруживаемые как в процессе работы, так и в отдалённые сроки настоящего и последующих поколений. Они проникаю в организм человека через органы дыхания, желудочно-кишечный тракт, кожные покровы, слизистые оболочки.</p>
+
+<p><strong>Биологические активные факторы</strong> — это микроорганизмы (живые клетки, споры), патогенные микроорганизмы (вирусы, грибы, растения), опасные животные, пресмыкающиеся.</p>
+
+<p><strong>Психофизиологические факторы</strong> — это факторы трудового процесса, характеризующие физические и нервно-психологические перегрузки, определяющие тяжесть и напряженность труда. </p>
+
+<p><strong>Тяжесть труда</strong> — это характеристика трудового процесса, отражающая преимущественную нагрузку на опорно-двигательный аппарат и функциональные системы организма. Тяжесть труда характеризуется физической и динамической нагрузкой, массой поднимаемого и перемещаемого груза, общим числом стереотипных рабочих движений, величиной статической нагрузки, степенью наклона корпуса и перемещениями в пространстве.</p>
+
+<p><strong>Напряженность труда</strong> — это характеристика трудового процесса, отражающая, преимущественно, нагрузку на центральную нервную систему, органы чувств, эмоциональную сферу работников. </p>
+
+<p>Факторы труда, характеризующие напряжённость труда:</p>
+
+<ul>
+<li>Интеллектуальная, сенсорная и эмоциональная нагрузка;</li>
+<li>Степень монотонности нагрузок;</li>
+<li>Режим работы.</li>
+</ul>
+
+<h4 id="toc_7">Нормирование негативных факторов.</h4>
+
+<p>Целью санитарного нормирования негативных факторов является установление таких предельно допустимых уровней, которые при систематическом воздействии в течение рабочего дня на протяжении многих лет не вызывают существенных заболеваний и не мешают нормальной трудовой деятельности. </p>
+
+<p><strong>ПДК и ПДУ в зоне рабочей деятельности</strong> — это такой уровень негативных факторов (концентрация негативных веществ), которые в течение восьмичасового рабочего дня (не более 41 часа в рабочую неделю) не вызывают отклонений в состоянии здоровья работающих, а также не влияет на настоящие и будущие поколения.</p>
+
+<p>Гигиенические нормы инфразвука на рабочих местах: ГОСТ 121003-83 Шум. Общие требования безопасности; Гигиенические нормы 2251313-01 Предельно допустимые концентрации вредных веществ в воздухе рабочей зоны; СанПиН 2.2.4-548-96 Гигиенические требования к микроклимату производственных помещений; Санитарные нормы 2.2.4 / 218566-96 Производственная вибрация. Вибрация в помещениях жилых и общественных зданий.</p>
+
+<p>В зависимости от уровня негативных факторов условия труда делятся на четыре класса: </p>
+
+<ul>
+<li>оптимальные;</li>
+<li>допустимые;</li>
+<li>вредные;</li>
+<li>опасные.</li>
+</ul>
+
+<h3 id="toc_8">Основные принципы защиты от опасностей</h3>
+
+<p><strong>Принцип</strong> — это идея, мысль, основное положение.</p>
+
+<p><strong>Метод</strong> — это путь, способ достижения цели, исходящий из знания наиболее обширных закономерностей. </p>
+
+<p>Принципы и методы обеспечения безопасности являются специальными, в отличие от общих методов, присущих диалектике и логике. </p>
+
+<p><strong>Средства обеспечения безопасности</strong> — это конструктивное организационное материальное воплощение конкретной реализации принципов и методов. </p>
+
+<p>Принципы, методы, средства — это логический этап обеспечения безопасности. Их выбор зависит от конкретных условий деятельности, уровня безопасности, стоимости и других критериев. Принципов обеспечение безопасности много. Их можно классифицировать по нескольким признакам. </p>
+
+<p>По признаку реализации:</p>
+
+<ul>
+<li><strong>Ориентирующие</strong> принципы представляют собой основополагающие идеи, определяющие направление поиска безопасных решений и служащее методологической и информационной базой. 
+
+<ul>
+<li><em>Принцип системности</em> состоит в том, что любое явление, действие, всякий элемент рассматривается как элемент системы. Под <strong>системой</strong> понимается совокупность элементов, взаимодействие между которыми адекватно однозначному результату. Такую систему называют определённой. Если же совокупность элементов взаимодействует так, что возможен различные результаты, то система называется неопределённой. К элементам системы относятся материальные объекты, а также отношения и связи, существующие между ними. Различают естественные и искусственные системы. </li>
+<li><em>Принцип деструкции</em> заключается в том, что система, приводящая к опасному результату, разрушается за счёт исключения из неё одного или нескольких элементов. </li>
+<li><em>Принцип снижения опасности</em> заключается в использовании решений, которые направлены на  повышение безопасности, но не обеспечивают достижение желаемого или требуемого по нормам уровня. </li>
+<li><em>Принцип ликвидации опасности</em> состоит в устранении опасных и вредных факторов. </li>
+</ul></li>
+<li>  <strong>Технические</strong> принципы основаны на использовании физических законов и направлены на непосредственное предотвращение действия опасности. 
+
+<ul>
+<li><em>Принцип защиты расстоянием</em></li>
+<li><em>Принцип прочности</em> состоит в том, что в целях повышения уровня безопасности усиливают способность материалов, конструкций и их элементов сопротивляться разрушениям и остаточным деформациям от механических воздействий. </li>
+<li><em>Принцип слабого звена</em> состоит в применении в целях безопасности ослабленных элементов конструкции или специальных устройств, которые разрушаются или срабатывают при определённых предварительно рассчитанных значениях факторов, обеспечивая сохранность производственных объектов и безопасность персонала.</li>
+<li><em>Принцип экранирования</em> состоит в том, что между источником опасности и человеком устанавливается преграда, гарантирующая защиту от опасности. </li>
+</ul></li>
+<li><strong>Организационные</strong> принципы. К ним относятся принципы, реализующие в целях безопасности положение научной организации деятельности. 
+
+<ul>
+<li><em>Принцип защиты временем</em> предполагает сокращение до безопасных значений длительности нахождения людей в условиях воздействия опасности.</li>
+<li><em>Принцип нормирования</em> состоит в регламентации условий, соблюдение которых обеспечивает заданный уровень безопасности. </li>
+<li><em>Принцип несовместимости</em> заключается в пространственном и временном разделении объектов реального мира, основанном на учёте природы их взаимодействия с позиции безопасности. </li>
+<li><em>Принцип эргономичности</em> состоит в том, что для обеспечения безопасности учитываются антропометрические, психофизические и психологические свойства человека. </li>
+</ul></li>
+<li><strong>Управленческие</strong> принципы это принципы, определяющие взаимосвязь и отношения между отдельными стадиями и этапами процесса обеспечения безопасности. 
+
+<ul>
+<li><em>Принцип плановости</em> означает установление на определённые периоды направлений и количественных показателей деятельности.</li>
+<li><em>Принцип стимулирования</em> означает учёт количества и качества затраченного труда и полученных результатов при распределении материальных благ и моральным поощрением.</li>
+<li><em>Принцип компенсации</em> состоит в предоставлении различного рода льгот с целью восстановления нарушенного равновесия психических и психофизиологических процессов или предупреждения нежелательных изменений в состоянии здоровья.</li>
+<li><em>Принцип эффективности</em> состоит в сопоставлении фактических результатов с плановыми и оценки достигнутых показателей по критериям затрат и выгод. В области безопасности различают социальную, инженерно-техническую и экономическую эффективность. </li>
+</ul></li>
+</ul>
+
+<hr/>
+
+<h4 id="toc_9">Методы обеспечения безопасности</h4>
+
+<p>Под управлением БЖД понимается организованное воздействие на систему «человек —среда обитания» с целью достижения желаемых результатов. </p>
+
+<p>Функция управления БЖД:</p>
+
+<ol>
+<li>Анализ и оценка состояния объектов;</li>
+<li>Прогнозирование и планирование мероприятий для достижения целей и задач управления;</li>
+<li>Организация, то есть непосредственное формирование управляемой и управляющей систем;</li>
+<li>Контроль, то есть система наблюдения и проверки за ходом организации управления;</li>
+<li>Определение эффективности мероприятий;</li>
+<li>Стимулирование, то есть формы воздействия, побуждающие участников управления творчески решать проблемы управления.</li>
+</ol>
+
+<p>Классификация систем вентиляции</p>
+
+<ol>
+<li><p>По способу подачи воздуха</p>
+
+<ul>
+<li>естественная</li>
+<li>механическая
+
+<ul>
+<li>приточная</li>
+<li>вытяжная</li>
+<li>приточно-вытяжная</li>
+</ul></li>
+<li>смешанная (естественная и механическая вместе)</li>
+</ul></li>
+<li><p>По принципу организации воздухообмена</p>
+
+<ul>
+<li>общеобменная</li>
+<li>местная</li>
+<li>комбинированная</li>
+</ul></li>
+</ol>
+
+<h4 id="toc_10">Основные принципы защиты от физических полей</h4>
+
+<p>При решении задач защиты от энергетических воздействий выделяют источник, приёмник энергии и защитное устройство, которое уменьшает до допустимых уровней поток энергии к приёмнику. Защитные устройства обладают способностями отражать, поглощать, быть прозрачным по отношению к потоку энергии и характеризуется энергетическими коэффициентами поглощения, отражения, коэффициентом передачи. Поэтому можно выделить следующие принципы защиты:</p>
+
+<ol>
+<li>Защита осуществляется за счёт отражательной способности защитных устройств;</li>
+<li>Защита за счёт поглощательной способности защитных устройств;</li>
+<li>Защита осуществляется с учётом свойств прозрачности защитных устройств.</li>
+</ol>
+
+<p>Метод изоляции используют тогда, когда источник и приёмник энергии, являющийся одновременно объектом защиты, располагаются с разных сторон от защитного устройства. В основе этих методов лежит уменьшение прозрачности среды между источником и приёмником. При этом можно выделить два основных метода изоляции: уменьшение прозрачности среды, достигающееся за счёт поглощения энергии или за счёт высокой отражательной способности защитного устройства. Есть два вида поглощения энергии защитным устройством: поглощение энергии самим защитным устройством за счёт её отбора от источника в той или иной форме, в том числе в виде необратимых потерь, и поглощение энергии в связи с большой прозрачностью защитного устройства. </p>
+
+<p><strong>Защитный экран</strong> — это устройство с поверхностью, поглощающей, отражающей или преобразующей излучение различных видов энергии. Различают следующие принципы защиты:</p>
+
+<ul>
+<li>изоляция</li>
+<li>экранирование</li>
+<li>поглощение</li>
+<li>фильтрация</li>
+<li>разбавление</li>
+<li>принцип слабого звена</li>
+<li>отвод энергии в безопасное русло</li>
+</ul>
+
+<hr/>
+
+<h4 id="toc_11">Защита от вибрации</h4>
+
+<p>Защита от вибрации использует метод виброизоляции. Когда между источником вибрации и ее приемником, являющимся одновременно объектом защиты, устанавливают виброизолятор с малым коэффициентом передачи. Защита вибрации методом поглощения осуществляется в виде динамического гашения и вибропоглощения. В первом случае виброэнергия поглощается защитным устройством, отбирающим виброэнергию от источника на себя. Защитное устройство, увеличивающее рассеивание энергии в результате повышения диссипативных свойств системы, называется поглотителем вибрации. Защита от вибрации в источнике ее возникновения предполагает проектирование и конструирование таких машин и тех процессов, в которых исключены или снижены неуравновешенные силы, отсутствует ударное взаимодействие деталей, вместо подшипников качения используют подшипники скольжения. </p>
+
+<p>Совокупность методов и средств для уменьшения вредного воздействия вибрации на человека, приборы и механизмы называется виброзащитой.<br/>
+Средства защиты от вибрации подразделяются на коллективные и индивидуальные.</p>
+
+<h5 id="toc_12">Методы защиты от вибрации</h5>
+
+<ul>
+<li><strong>Вибродемпфирование</strong> — снижение вибрации, путем усиления в конструкции процессов трения, рассеивающих колебательную энергию, в результате необратимого преобразования ее в теплоту, при деформациях, возникающих в материалах, из которых изготовлена конструкция. Увеличения потерь энергии можно достичь использованием материалов с большим внутренним трением, использованием пластмасс, дерева, резины, нанесения слоя упруго-вязких материалов, обладающих большими потерями на внутреннее трение.<br/></li>
+<li><strong>Виброгашение</strong> — способ снижения вибрации путем введения в систему дополнительных сопротивлений.<br/></li>
+<li><strong>Вибропоглощение</strong> — способ снижения вибрации, путем усиления в конструкции процессов внутреннего трения, рассеивающих виброэнергию, в результате необратимого преобразования ее в теплоту, при деформациях, возникающих в материалах, из которых изготовлена конструкция и в местах сочленяя ее элементов.<br/></li>
+<li><strong>Виброизоляция</strong> — способ снижения вибрации защищенного объекта посредством введения в систему упругой связи, препятствующей передачи вибрации от источника колебаний к основанию или смежным элементам конструкции. </li>
+</ul>
+
+<p>При уменьшении вибрации используются следующие организационно-технические мероприятия: </p>
+
+<ul>
+<li>Уменьшение времени воздействия вибрации применением дистанционного управления;</li>
+<li>Сокращения рабочего дня;</li>
+<li>Устройства перерывов в работе.</li>
+</ul>
+
+<p><strong>Звукопоглощение</strong> — способность пористых и рыхловолокнистых материалов а также резонансных конструкций поглощать звуковую энергию.<br/>
+Акустическая обработка помещений — установка в помещениях звукопоглощающих облицовок и штучных звукопоглотителей для уменьшения интенсивности отраженных звуковых волн с целью снижения шума в этих помещениях.<br/>
+<strong>Звукоизоляция</strong> — способность преград отражать звуковую энергию.<br/>
+Для уменьшения аэродинамического шума систем вентиляция шума газо- и турбонаддува и газовыхлопа двигателей применяют реактивные и активные глушители.  </p>
+
+<p>Средства коллективной защиты бывают: </p>
+
+<ul>
+<li>Архитектурно-планировочные </li>
+<li>Организационно-технические </li>
+<li>Акустические </li>
+<li>Звукоизоляция </li>
+<li>Звукопоглощение </li>
+<li>Глушители<br/></li>
+</ul>
+
+<p>Электростатическое экранирование сводится к замыканию электростатического поля на поверхность металлического экрана и отводу электрических зарядов на землю.<br/>
+Магнитостатическое экранирование заключается в замыкании магнитного поля в толще экрана происходящем из-за его повышенной магнитопроводимости.  </p>
+
+<h4 id="toc_13">Защита от воздействия магнитных полей</h4>
+
+<p>Защита от воздействия магнитных полей промышленных частот (3000 Гц) осуществляется путем:</p>
+
+<ul>
+<li>ограничения места и времени нахождения персонала в зоне воздействия электромагнитных импульсов.<br/></li>
+<li>Использование средств индивидуальной защиты </li>
+<li>Использование тех средств, ограничивающих поступление электромагнитной энергии на раб место </li>
+<li>Применение источников электромагнитного излучения с минимальной необходимой мощностью </li>
+<li>Выбор рациональных режимов работы оборудования </li>
+<li>Использование средств обозначения</li>
+</ul>
+
+<hr/>
+
+<h4 id="toc_14">Защита от лазерного излучения</h4>
+
+<p><strong>Лазер</strong> — это генератор электромагнитного излучения оптического диапазона, основанный на использовании вынужденного (стимулированного) излучения. По степени опасности лазерного излучения для обслуживающего персонала лазеры подразделяются на четыре класса:</p>
+
+<ol>
+<li>Безопасный — выходное излучение не опасно для глаз</li>
+<li>Малоопасный — опасно для глаз прямое или зеркально отражённое излучение</li>
+<li>Среднеопасный — опасно для глаз прямое, зеркально а также диффузно отражённое излучение на расстоянии 10 см от отражающей поверхности и / или для кожи прямое или зеркально отражённое излучение</li>
+<li>Высокоопасный — опасно для кожи диффузно отражённое излучение на расстоянии 10 см от отражающей поверхности</li>
+</ol>
+
+<h5 id="toc_15">Меры защиты</h5>
+
+<ul>
+<li>Организационные
+
+<ul>
+<li>сокращённый рабочий день;</li>
+<li>дополнительный отпуск;</li>
+<li>рациональная организация режима труда и отдыха;</li>
+<li>окраска оборудования в тёмные матовые цвета;</li>
+</ul></li>
+<li>Санитарно-гигиенические
+
+<ul>
+<li>очки</li>
+<li>перчатки</li>
+<li>дистанционное управление</li>
+</ul></li>
+</ul>
+
+<h4 id="toc_16">Меры защиты от инфракрасного излучения</h4>
+
+<p>Теплозащитные экраны применяются для локализации источников лучистой теплоты, уменьшения облучённости на рабочих местах и снижения температуры поверхностей, окружающей рабочие местности. Различают экраны теплоотражающие, теплопоглащающие, теплоотводящие. По степени прозрачности экраны делят на три класса:</p>
+
+<ul>
+<li>непрозрачные</li>
+<li>полупрозрачные</li>
+<li>прозрачные</li>
+</ul>
+
+<h4 id="toc_17">Устройства для защиты от поражения электрическим током</h4>
+
+<ul>
+<li><p>Защита от прямого прикосновения:</p>
+
+<ul>
+<li>основная изоляция токоведущих частей</li>
+<li>защита расстоянием (ограждения и оболочки, установка барьеров, размещение оборудования вне зоны досягаемости)</li>
+<li>сверхнизкое (малое) напряжение</li>
+</ul></li>
+<li><p>Защита от поражения током в случае повреждения изоляции:</p>
+
+<ul>
+<li>автоматическое отключение питания</li>
+<li>уравнивание и выравнивание потенциалов</li>
+<li>двойная и усиленная изоляция</li>
+<li>защитное электрическое разделение цепей</li>
+<li>изолирующие (непроводящие) помещения, зоны площадки</li>
+<li>устройства защитного заземления, зануления и защитного отключения</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_18">Виды и условия трудовой деятельности</h3>
+
+<p>Условия труда человека классифицируются по степени тяжести и напряженности трудового процесса и по показателям вредности и опасности производственной среды. По уровню затраты энергии:</p>
+
+<ul>
+<li>Физический труд</li>
+<li>Механизированный</li>
+<li>На конвейере</li>
+<li>Полуавтоматическое и автоматическое производство</li>
+</ul>
+
+<p>Параметрами производственной среды, которые влияют на состояние здоровья человека, являются следующие факторы:</p>
+
+<ul>
+<li>физические
+
+<ul>
+<li>климатические параметры</li>
+<li>электромагнитное излучение</li>
+<li>статическое (шум, вибрация)</li>
+</ul></li>
+<li>химические (различные вредные вещества)</li>
+<li>биологические (патогенная микрофлора и т. д.)</li>
+</ul>
+
+<p>По факторам производственной среды условия труда подразделяются на четыре класса:</p>
+
+<ul>
+<li>Оптимальные, при которых сохраняется не только здоровье работающих, но и создаются условия для высокой работоспособности;</li>
+<li>Допустимые, которые характеризуются такими уровнями факторов среды, которые не повышают установленных гигиеническими нормативами для рабочих мест. При этом возможные изменения функционального состояния организма проходят за время перерывов на отдых или к началу следующей смены и не оказывают неблагоприятного воздействия на состояние здоровья работающих и их потомства;</li>
+<li><p>Вредные, которые характеризуются наличием факторов, превышающих гигиенические нормативы и оказывающих воздействие на организм работающего и / или его потомства. Вредные условия труда по степени превышения нормативов подразделяются на четыре степени вредности. </p>
+
+<p>Первая степень вредности характеризуется такими отклонениями от допустимых норм,   при которых возникают обратимые функциональные изменения и риск развития заболеваний. Вторая степень характеризуется уровнями вредных факторов, которые могут вызвать стойкие функциональные нарушения, рост заболеваемости с временной потерей трудоспособности, появление начальных признаков профессиональных заболеваний. Третья степень характеризуется такими уровнями вредных факторов, при которых, как правило, развиваются профессиональные заболевания в лёгких формах в период трудовой деятельности. Четвёртая степень — это условия производственной среды, при которых могут возникнуть выраженные формы профессиональных заболеваний, отмечаются высокие уровни заболеваемости с временной утратой трудоспособности.</p></li>
+<li><p>Опасные (экстремальные) условия труда, которые характеризуются такими уровнями вредных производственных факторов, воздействие которых в течение рабочей смены или даже её части создаёт угрозу жизни и высокий риск тяжёлых форм острых профессиональных заболеваний.</p></li>
+</ul>
+
+<p>Чрезмерные или запредельные формы психического напряжения вызывают нарушения нормального психологического состояния человека, что приводит к снижению индивидуального свойственного человеку уровню психической работоспособности. Можно выделить два типа запредельного психического напряжения: <em>тормозной</em> и <em>возбудимый</em>. </p>
+
+<hr/>
+
+<h3 id="toc_19">Эргономические основы безопасности</h3>
+
+<p><strong>Эргономика</strong> занимается вопросами повышения эффективности целенаправленной деятельности человека. Эргономика в основном изучает человека во время трудовой деятельности. Эргономика исследует взаимодействие человека с искусственной (технической) средой. При этом человеку свойственны некоторые ограничения, которые конструктору необходимо принимать во внимание. Конструкции, порождающие те или иные ситуации, могут быть как относительно простыми, так и чрезвычайно сложными. Важной частью эргономики является анатомия человека, которая составляет теоретическую основу антропометрии и биомеханики. </p>
+
+<p><strong>Антропометрия</strong>, или измерение человека, позволяет получить данные, необходимые для правильного расположения органов управления и определения размеров рабочих пространств. </p>
+
+<p><strong>Биомеханика</strong> изучает приложение сил к телу человека. При этом необходимо учитывать, что человека необходимо учить эффективному приложению сил, так как в условиях техносферы инстинктивные способности зачастую не реализуются. Человек, в отличие от низших животных может приложить мышечную силу того же порядка, что и масса тела. Эффективная биомеханика требует знания анатомии, в частности, расположение основных групп мышц, их составы и способы приведения их в действие. </p>
+
+<p>Физиология вносит в эргономику два важных компонента — физиология труда и гигиена труда.</p>
+
+<p><strong>Физиология труда</strong> изучает процесс производства энергии организмом человека. Энергозатраты исследуются для определения количества потребляемой химической энергии, содержащейся в человеческом организме, что, в свою очередь, учитывается   для определения ожидаемых продолжительностей непрерывной работы в течение смены, частоты и продолжительности перерывов в работе.</p>
+
+<p>Эргономика учитывает рекомендации по гигиене труда, которые зависят от параметров окружающей среды. При этом учитываются такие характеристики человека, как возраст, пол, пригодность к работе и так далее. Рекомендации эргономики зачастую ставят цель обеспечить выполнение конкретной работы с определённым эффектом. Под <strong>эффектом</strong> будем понимать не только экономический результат, но и устранением вредного воздействия на здоровье и сведением риска несчастных случаев к минимуму.</p>
+
+<p><strong>Эргономика</strong> — это научная дисциплина, комплексно изучающая человека в конкретных условиях его деятельности, в современном производстве. Основной объект исследования эргономики — система «человек – машина».</p>
+
+<p>На человека в процессе труда действует множество факторов: вид трудовой деятельности, её тяжесть и напряжённость, условия, в которой она осуществляется, психофизиологические возможности человека. Для того, чтобы человеко-машинная система функционировала эффективно и не приносила ущерба здоровью, необходимо, прежде всего, обеспечить совместимость характеристик машины и человека. Она определяется его антропометрической, сенсомоторной, энергетической (биомеханической) и психофизиологической совместимостью. </p>
+
+<p><em>Антропометрическая</em> совместимость предполагает учёт размеров тела человека, возможность обзора внешнего пространства, положения (позы) оператора в процессе работы.</p>
+
+<p><em>Сенсомоторная</em> совместимость предполагает учёт скорости двигательных (моторных) операций человека и его сенсорных реакций на различные виды раздражителей (световые, звуковые и так далее) при выборе скорости работы машины и подачи сигналов.</p>
+
+<p><em>Энергетическая</em> (биомеханическая) совместимость предполагает учёт силовых возможностей человека при определении усилий, прилагаемых к органам управления. </p>
+
+<p><em>Психофизиологическая</em> совместимость должна учитывать реакцию человека на свет, цветовую гамму, частотный диапазон подаваемых сигналов, и другие эстетические параметры машины.</p>
+
+<p>К антропометрическим характеристикам человека относятся: </p>
+
+<ul>
+<li>статические характеристики — размеры тела и его отдельных частей</li>
+<li>динамические характеристики — возможные углы поворота отдельных частей тела (зоны досягаемости)</li>
+</ul>
+
+<p>В процессе управления человек обязательно должен прилагать некоторое усилие к органам управления, так как отсутствие усилий дезориентирует человека, лишает его уверенности в правильности выполнения действий.</p>
+
+<p>Организация рабочего места, конструкция органов контроля и управления должны учитывать все факторы. Пространство рабочего места, в котором осуществляются трудовые процессы, должно быть разделено на рабочие зоны. Рабочую зону, удобную для действия обеих рук, нужно обязательно совмещать с зоной визуального обзора. </p>
+
+<p>Важное эргономическое значение имеет рабочая поза человека. Рабочая поза стоя требует больших энергетических затрат и приводит к быстрому утомлению. Рабочая поза сидя менее утомительна и более предпочтительна. Рабочая зона должна быть организована, а органы управления должны быть расположены таким образом, чтобы в рабочей позе проекция центра тяжести тела человека была расположена в пределах площади его опоры. В противном случае положение тела человека будет неустойчивым и потребует значительных мышечных усилий. Составной частью рабочего места в положении сидя является рабочее кресло оператора. Ножные и ручные органы управления должны соответствовать по прилагаемым усилиям биомеханическим характеристикам человека и в зависимости от частоты их использования располагаться в соответствующих зонах досягаемости</p>
+
+<hr/>
+
+<h2 id="toc_20">Чрезвычайные ситуации</h2>
+
+<p><strong>Чрезвычайными ситуациями</strong> принято называть обстоятельства, возникающие в результате стихийных бедствий (природные ЧС), аварий и катастроф в промышленности и на транспорте, (техногенные ЧС), экологических катастроф, диверсий или факторов военного, социального и политического характера, которые заключаются в резком отклонении от нормы протекающих явлений и процессов и оказывают значительное воздействие на жизнедеятельность людей, экономику, социальную сферу или природную среду.</p>
+
+<p>В ФЗ-68 от 21.12.1994 «О защите населения и территорий от ЧС природного и техногенного характера» дано другое определение: 
+<strong>ЧС</strong> — это обстановка на определённой территории, сложившаяся в результате аварии, опасного природного явления, катастрофы, стихийных или иных бедствий, которые могут повлечь или повлекли за собой человеческие жертвы, ущерб здоровью людей или окружающей природной зоне значительные материальные потери и нарушение условий жизнедеятельности людей. </p>
+
+<p><strong>Зона ЧС</strong> — это территория или водная акватория, на которой в результате возникновения источника ЧС или распространения его последствий на другие районы возникла чрезвычайная ситуация. </p>
+
+<p><strong>Стихийные бедствия</strong> — это опасные явления или процессы геофизического, геологического, гидрологического, атмосферного и другого происхождения таких масштабов, которые вызывают катастрофические ситуации, характеризующиеся внезапным нарушением жизнедеятельности населения, нарушением и уничтожением материальных ценностей, поражением людей.</p>
+
+<p><strong>Авария</strong> — это повреждение машины, станка, установки, поточной линии, системы энергоснабжения, оборудования, транспортного средства, здания, сооружения. </p>
+
+<p><strong>Катастрофа</strong> — это событие с трагическими последствиями или крупная авария с гибелью людей.</p>
+
+<p><strong>Экологическая катастрофа</strong> — это стихийное бедствие, крупная производственная или транспортная авария (катастрофа), которые привели к чрезвычайно неблагоприятным изменениям в среде обитания, как правило, к массовой гибели живых существ и значительному экономическому ущербу.</p>
+
+<p>Все ЧС классифицируются по трём признакам: </p>
+
+<ol>
+<li>По сфере возникновения:
+
+<ul>
+<li>природного характера
+
+<ul>
+<li>геологические</li>
+<li>метеорологические </li>
+<li>гидрологические</li>
+<li>природные пожары</li>
+<li>массовые заболевания</li>
+</ul></li>
+<li>техногенного характера:
+
+<ul>
+<li>на химически опасных объектах</li>
+<li>на радиационно опасных объектах</li>
+<li>на пожаро- и взрывоопасных объектах</li>
+<li>на гидродинамически опасных объектах</li>
+<li>на транспорте (любом)</li>
+<li>на коммунально-энергетических сетях</li>
+</ul></li>
+<li>экологического характера:
+
+<ul>
+<li>изменение состояния суши</li>
+<li>изменение свойств воздушной среды</li>
+<li>изменение состояния гидросферы</li>
+<li>изменение состояния биосферы</li>
+</ul></li>
+</ul></li>
+<li>По ведомственной принадлежности:
+
+<ul>
+<li>в строительстве</li>
+<li>в промышленности</li>
+<li>в коммунально-бытовой сфере</li>
+<li>на транспорте</li>
+<li>в сельском и лесном хозяйстве</li>
+</ul></li>
+<li>По масштабу возможных последствий</li>
+</ol>
+
+<p>ЧС классифицируются согласно Положения о классификации чрезвычайных ситуаций природного и техногенного характера № 1094 от 13.09.1996 г. в зависимости от:</p>
+
+<ol>
+<li>Количества людей, пострадавших в этих ситуациях, у которых оказались нарушены условия жизнедеятельности</li>
+<li>Размера материального ущерба</li>
+<li>Границы зон распространения поражающих факторов чрезвычайных ситуаций</li>
+</ol>
+
+<p>ЧС подразделяются на:</p>
+
+<ul>
+<li>локальные</li>
+<li>местные</li>
+<li>территориальные</li>
+<li>региональные</li>
+<li>федеральные</li>
+<li>трансграничные</li>
+</ul>
+
+<p>К <em>локальным</em> относятся чрезвычайные ситуации, в результате которых пострадали не более 10 человек, либо нарушены условия жизнедеятельности не более 100 человек, либо материальный ущерб составляет не более 1000 минимальных размеров оплаты труда на день возникновения ЧС и зона ЧС не выходит за пределы территории объекта производственного или социального назначения. </p>
+
+<p>К <em>местным</em> относятся ЧС, в результате которых пострадали свыше 10, но не более 50 человек, либо нарушены условия жизнедеятельности свыше 100, но не более 300 человек, либо материальный ущерб свыше 1000, но не более 5000 минимальных размеров оплаты труда и не выходит зона ЧС не выходит за пределы населённого пункта.</p>
+
+<p>К <em>территориальным</em> относятся ЧС, в результате которых пострадали свыше 50, но не более 500 человек, либо нарушены условия жизнедеятельности свыше 500, но не более 1000 человек, либо материальный ущерб свыше 5000, но не более 500000 минимальных размеров оплаты труда и зона ЧС не выходит за пределы субъекта РФ.</p>
+
+<p>К <em>региональным</em> относятся ЧС, в результате которых пострадали свыше 50, но не более 500 человек, либо нарушены условия жизнедеятельности свыше 500, ноне более 1000 человек, либо материальный ущерб свыше 500000, но не более 5000000 минимальных размеров оплаты труда и зона ЧС не выходит за пределы двух субъектов РФ.</p>
+
+<p>К <em>федеральным</em> относятся ЧС, в результате которых пострадали свыше 500 человек, либо нарушены условия жизнедеятельности свыше 1000 человек, материальный ущерб свыше 5000000 минимальных размеров оплаты труда и зона ЧС выходит за пределы двух субъектов РФ.</p>
+
+<p>К <em>трансграничным</em> относятся ЧС, поражающие факторы которой выходят за пределы РФ, либо ЧС, которая произошла за рубежом, затрагивающая территорию РФ.</p>
+
+<hr/>
+
+<p>Ликвидация ЧС осуществляется силами и средствами предприятий, учреждений и организаций, независимо от их организационно-правовой формы, органов местного самоуправления, органов исполнительной власти субъектов Российской Федерации, на территории которых сложилась чрезвычайная ситуация под руководством соответствующих комиссий по ЧС. Ликвидация локальной ЧС осуществляется силами и средствами организаций, местной — органами местного самоуправления, территориальной — силами и средствами органов исполнительной власти субъектов Российской Федерации; региональные и федеральные — силами и средствами органов исполнительной власти субъектов Российской Федерации, оказавшихся в зоне ЧС. </p>
+
+<h3 id="toc_21">ЧС природного и техногенного характера</h3>
+
+<p><strong>Стихийные бедствия</strong> — это различные явления природы, вызывающие внезапные нарушения нормальной жизнедеятельности населения, а также разрушение и уничтожение материальных ценностей. </p>
+
+<p>Последствия землетрясений</p>
+
+<p>К первичным факторам поражения при землетрясении практически можно отнести только резкие толчки и колебания земной поверхности. Вторичные факторы условно можно подразделить на природные и связанные с человеческой деятельностью. </p>
+
+<p><strong>Обвалы</strong> — это обрыв или катастрофическое падение больших масс горных пород, их опрокидывание, дробление и скатывание на крутых и обрывистых склонах.</p>
+
+<p><strong>Наводнение</strong> — это затопление водой местности, прилегающей к реке, озеру или водохранилищу, морю. Существуют различные способы борьбы с наводнениями.</p>
+
+<p><strong>Эпидемия</strong> — это быстрое массовое распространение остро заразной болезни (инфекции) среди людей. Основные механизмы передачи инфекции:</p>
+
+<ul>
+<li>Пищевой</li>
+<li>Водный</li>
+<li>Воздушно-капельный</li>
+<li>Воздушно-пылевой </li>
+<li>Контактно-бытовой</li>
+<li>Через передатчиков (животные и насекомые)</li>
+</ul>
+
+<p>Устранение источника инфекции:</p>
+
+<ul>
+<li>дезинфекция</li>
+<li>дезинсекция</li>
+<li>дератизация</li>
+</ul>
+
+<h3 id="toc_22">ЧС техногенного характера</h3>
+
+<p>Это обстановка на определённой территории, сложившаяся в результате аварии, крупной аварии, повлекшей за собой человеческие жертвы, ущерб здоровью людей или окружающей среде, значительные материальные потери и нарушение условий жизнедеятельности людей.</p>
+
+<hr/>
+
+<h3 id="toc_23">ЧС при авариях на химически опасных объектах</h3>
+
+<p><strong>Химически опасный объект</strong> — это объект, на котором при аварии может произойти поражение людей, сельскохозяйственных животных и растений, либо заражение окружающей природной среды опасными химическими веществами в концентрациях или количествах, превышающих естественный уровень их содержания в природе. По степени опасности аварии на химически опасных объектах подразделяют на следующие виды:</p>
+
+<ul>
+<li>частные — не связанные с выбросом химически опасных веществ</li>
+<li>объектовые — не выходят за пределы санитарно-защитной зоны</li>
+<li>местные</li>
+<li>региональные</li>
+<li>глобальные</li>
+</ul>
+
+<p><strong>Радиационно опасные объекты</strong> — это предприятия, на которых при аварии могут произойти массовые радиационные поражения. Радиационные аварии подразделяются на три типа:</p>
+
+<ul>
+<li>локальные</li>
+<li>местные</li>
+<li>общие</li>
+</ul>
+
+<p>Пожаро- и взрывоопасных объекты по взрывной, взрывопожарной и пожарной опасности подразделяются на три категории:</p>
+
+<ul>
+<li>А. Нефтеперерабатывающие заводы и т. п.</li>
+<li>Б. Цехи приготовления муки, сахарной пудры и т. п.</li>
+<li>В. Лесопилки, деревообрабатывающие производства и т. п.</li>
+<li>Г. Металлургические заводы</li>
+<li>Д. Металлообрабатвающие предприятия, станкостроительные цеха и т. д.</li>
+</ul>
+
+<p>Пожары на крупных промышленных предприятиях подразделяются на отдельные (в отдельностоящих зданиях) и массовые.</p>
+
+<hr/>
+
+<h3 id="toc_24">Защита населения в экстремальных и чрезвычайных ситуациях</h3>
+
+<p><strong>Экстремальная ситуация</strong> (ЭС) — это обстановка на определённой территории, сложившаяся в результате аварии, опасного природного явления, катастрофы, стихийного или иного бедствия, что может повлечь за собой человеческие жертвы, нанести ущерб здоровью людей или окружающей среде, а также повлечь значительные материальные потери и нарушить условия жизнедеятельности людей. </p>
+
+<ul>
+<li>Экстремальные ситуации <em>техногенного</em> характера — пожары, взрывы, транспортные аварии, аварии с выбросами радиоактивных веществ, химически отравляющих веществ, ядовитых веществ, аварии на промышленных сооружениях, коммунальных системах жизнеобеспечения и внезапное обрушение сооружений. </li>
+<li>Экстремальные ситуации <em>природного</em> происхождения — опасные гидрологические, геологические, метеорологические и геофизические явления.</li>
+<li>Экстремальные ситуации <em>биолого-социального</em> характера — алкоголизм, наркомания, токсикомания, различные акты насилия, общественные беспорядки, голод и терроризм.</li>
+<li>Экстремальные ситуации, связанные с <em>изменением состояния каких-либо сред</em> — водной, воздушной, почвы, ландшафта; инфекционные заболевания животных, растений и людей, антропозооноза.</li>
+</ul>
+
+<p>Реакции человека в экстремальной ситуации:</p>
+
+<ul>
+<li><strong>Бред</strong> — это совокупность разнообразных представлений, идей, умозаключений, не соответствующих действительности, но при этом человека невозможно разуверить. Бред сопровождается страхом, тревогой, ощущением неясной опасности.</li>
+<li><strong>Галлюцинации</strong> — это непроизвольно возникающее ложное (мнимое) восприятие несуществующих объектов. Для личности эти объекты носят характер реальных. Галлюцинации появляются при многих психических заболеваниях: шизофрении, а также при психических травмах, душевных потрясениях и при ожидании увидеть желаемое. </li>
+<li><strong>Апатия</strong> — это состояние полного безразличия или равнодушия. При этом происходит снижение физической активности. Во время апатии ощущается усталость, заторможенность.</li>
+<li><strong>Ступор</strong> — это состояние резкой угнетённости, выражающееся в полной неподвижности и молчаливости. Это самая сильная защитная реакция организма. Может длиться от нескольких минут до нескольких часов и может привести к физическому истощению.</li>
+<li><strong>Двигательное возбуждение</strong> — обозначение большого ряда неконтролируемых моделей движений тела. </li>
+<li><strong>Агрессия</strong> — индивидуальное или коллективное поведение или действие, направленное на нанесение физического или психического вреда либо на уничтожение человека или группы людей. Это непроизвольный способ, которым организм человека пытается снизить высокое внутреннее напряжение. Агрессия может быть погашена страхом наказания.</li>
+<li><strong>Страх</strong> — это эмоция, возникающая в ситуациях угрозы биологическому существованию индивида, направленная на источник действительной или воображаемой опасности. Признаки страха — напряжение мышц, учащённое сердцебиение, учащённое дыхание, снижение контроля за собственным поведением.</li>
+<li><strong>Истерика</strong> — это нервный припадок, выражающийся в резких переходах от плача к смеху. Признаки — чрезмерное возбуждение, множество движений, театральные позы, насыщенная быстрая речь.</li>
+<li>Нервная дрожь</li>
+<li><strong>Плач</strong> — когда человек плачет, в организме выделяются вещества, обладающие успокаивающим действием. Если ситуация затягивается, внутреннее напряжение наносит вред физическому и психическому здоровью человека.</li>
+<li>Попытка самоубийства.</li>
+</ul>
+
+<p><strong>Терроризм</strong> — это средство достижения политических целей путём совершения террористических убийств, похищений, диверсий и других актов насилия.</p>
+
+<p><strong>Средства массового поражения</strong> — компоненты ядерного, химического и биохимического оружия</p>
+
+<p>Виды терроризма:</p>
+
+<ul>
+<li>Убийство ножом, огнестрельным оружием или ядом</li>
+<li>Взрывы в общественных местах</li>
+<li>Захват самолётов, автобусов и автомобилей</li>
+<li>Захват или похищение заложников с последующей продажей в рабство</li>
+<li>Поджоги, рэкет, угрозы </li>
+<li>Отравление колодцев, водоёмов и продуктов</li>
+<li>Использование оружия массового поражения, электромагнитных и кибернетических средств</li>
+<li>Камикадзе, шахиды</li>
+<li>Моральный терроризм</li>
+<li>Химический терроризм</li>
+<li>Биологический терроризм</li>
+<li>Почтовый терроризм</li>
+</ul>
+
+<p>Существует федеральный закон «О борьбе с терроризмом». Основные принципы борьбы с терроризмом:</p>
+
+<ul>
+<li>Законность</li>
+<li>Приоритетность предупреждения</li>
+<li>Неотвратимость наказания</li>
+<li>Сочетание гласных и негласных методов борьбы с терроризмом</li>
+<li>Минимальные уступки террористам</li>
+<li>Минимальная огласка приёмов и тактик поведения контртеррористических операций</li>
+</ul>
+
+<h3 id="toc_25">Устойчивость функционирования объектов экономики в чрезвычайных ситуациях</h3>
+
+<p>При ЧС всевозможные предприятия, попавшие в их зону, теряют способность производить продукцию. Это называется потерей данным производственным объектом устойчивости функционирования.</p>
+
+<p><strong>Объект экономики</strong> — это субъект хозяйственной деятельности, производящий экономический продукт (результат человеческого труда и хозяйственной деятельности), или выполняющий различного вида услуги. Экономический продукт может быть вещественным или информационным.</p>
+
+<p>Под <strong>устойчивостью функционирования</strong> промышленного объекта в ЧС понимается способность объекта выпускать установленные виды продукции в заданных объёмах и номенклатуре, предусмотренных соответствующими планами в условиях этих ситуаций,  а также способность объекта к восстановлению в случае повреждения.</p>
+
+<p>Под <strong>устойчивостью технологической системы</strong> понимается возможность сохранения её работоспособности при чрезвычайной ситуации. Устойчивость можно выразить количественно с помощью коэффициента устойчивости \(k = \frac{W_{сохр}}{W_0}\), где \(W_{сохр}\) — прогнозируемые сохраняющиеся производственные мощности после воздействия поражающих факторов чрезвычайной ситуации без учёта либо с учётом потерь в результате утраты внешних связей (поставок необходимых ресурсов; \(W_0\) — производственные мощности до воздействия поражающих факторов чрезвычайной ситуации. Производственная мощность в данном случае — объём выпускаемой в течение года продукции. </p>
+
+<p>Анализ состояния безопасности промышленных объектов показывает, что её низкий уровень связан с неудовлетворительным состоянием основных фондов, медленными темпами реконструкции производства, отставанием сроков ремонта, неисправностями или отсутствием надёжных систем предупреждения и локализации аварий, приборов контроля и средств защиты.</p>
+
+<p>Повышение устойчивости функционирование объектов экономики достигается за счёт проведения организационно-технических мероприятий, которым всегда предшествует оценка устойчивости функционирования конкретного объекта экономики.</p>
+
+<p><strong>Промышленная безопасность</strong> — это состояние защищённости жизненно важных интересов личности и общества от аварий на опасных производственных объектах и последствий указанных аварий.</p>
+
+<hr/>
+
+<h3 id="toc_26">Пожары, взрывы</h3>
+
+<p><strong>Пожар</strong> — это неконтролируемый процесс горения, сопровождающийся уничтожением материальных ценностей и создающий опасность для жизни людей.</p>
+
+<p><strong>Пожарная опасность</strong> — это возможность возникновения или развития пожара, заключённая в каком-либо веществе, состоянии или процессе.</p>
+
+<p><strong>Пожароопасный объект</strong> — это объект, на котором производятся (хранятся, транспортируются) продукты, приобретающие при некоторых условиях способность к возгоранию.</p>
+
+<p><strong>Горение</strong> — это сложный физико-химический процесс превращения горючих веществ и материалов в продукты сгорания, сопровождаемый интенсивным выделением тепла, дыма и светового излучения, в основе которого лежат быстротекущие химические реакции окисления в атмосфере кислорода воздуха.</p>
+
+<p>Особенностями горения на пожаре в сравнении с другими видами горения является склонность к самопроизвольному распространению огня, интенсивное выделение дыма, содержащего продукты полного и неполного окисления.</p>
+
+<p>Пожары по своим масштабам и интенсивности подразделяются на виды: </p>
+
+<ul>
+<li><em>Отдельный пожар</em> — это пожар, возникший в отдельном здании или сооружении. Продвижение людей и техники по застроенной территории между отдельными пожарами возможно без средств защиты от теплового излучения.</li>
+<li><em>Сплошной пожар</em> — одновременное интенсивное горение преобладающего количества зданий и сооружений на данном участке застройки. Продвижение людей и техники через участок сплошного пожара невозможно без средств защиты от теплового излучения.</li>
+<li><em>Огневой шторм</em> — особая форма распространяющегося сплошного пожара, характерными признаками которого являются наличие восходящего потока продуктов сгорания и нагретого воздуха, приток свежего воздуха со всех сторон со скоростью не менее 50 км / ч по направлению к границам огневого шторма.</li>
+<li><em>Массовый пожар</em> — это совокупность отдельных и сплошных пожаров.</li>
+</ul>
+
+<p>Интенсивность пожаров во многом зависит от огнестойкости объектов и составных частей. Строительные и другие материалы по своему поведению в условиях высоких температур подразделяются на несгораемые, трудносгораемые и сгораемые. </p>
+
+<p><strong>Огнестойкость зданий</strong> — это способность зданий оказывать сопротивление воздействию высоких температур во времени при сохранении своих эксплуатационных свойств. Огнестойкость здания зависит от пределов огнестойкости его основных конструкционных частей. </p>
+
+<p><strong>Предел огнестойкости конструкции</strong> — это время, в течение которого конструкция выполняет свои функции в условиях пожара. Предел огнестойкости конструкции зависит от поперечного сечения, толщины защитного слоя, возгораемости строительного материала, от способности сохранять механические свойства при воздействии высоких температур.</p>
+
+<p>Пожары характеризуются рядом параметров: </p>
+
+<ul>
+<li><strong>Продолжительность пожара</strong> — это время с момента его возникновения до прекращения неконтролируемого горения. </li>
+<li><strong>Температура внутреннего пожара</strong> — это среднеобъёмная температура газовой среды в помещении.</li>
+<li><strong>Температура открытого пожара</strong> — это температура пламени.</li>
+<li><strong>Площадь пожара</strong> — это площадь проекции зоны горения на горизонтальную и вертикальную плоскости.</li>
+<li><strong>Зона горения</strong> — это часть пространства, в которой происходит подготовка горючих веществ к горению и их горение. Она включает в себя объём паров и газов, ограниченные зоной горения и поверхности горячих веществ, с которой пары и газы поступают в объём зоны горения.</li>
+<li><strong>Зона теплового излучения</strong> — это часть пространства, примыкающая к зоне горения, в которой тепловое воздействие приводит к заметному изменению состояния материалов и конструкций и делает невозможным пребывание в нём людей без специальной тепловой защиты. </li>
+<li><strong>Зона задымления</strong> — это часть пространства, примыкающая к зоне горения и заполненная дымовыми газами в концентрации, создающей угрозу жизни и здоровью людей или затрудняющей действия пожарных подразделений.</li>
+<li><strong>Фронт сплошного пожара</strong> — это граница сплошного пожара, по которой огонь распространяется с наибольшей скоростью.</li>
+<li><strong>Распространение пожара</strong> — это процесс распространения зоны горения по поверхности материала за счёт теплопроводности, тепловой радиации и конвекции.</li>
+</ul>
+
+<p>Пожарная безопасность технологических процессов делится на пять категорий. </p>
+
+<ul>
+<li>А. Процесс получения, хранения и применения веществ, способных воспламеняться или взрываться в результате воздействия воды или кислорода воздуха.</li>
+<li>Б. Процесс получения, хранения и применения легковоспламеняющихся и горючих жидкостей, температура вспышки паров которой составляет 280...1200 °С.</li>
+<li>В. Процесс получения, хранения и применения твердых сгораемых веществ, а также горючих жидкостей с температурой вспышки паров выше 1200 °C.</li>
+<li>Г. Процесс получения, хранения и применения несгораемых веществ и материалов в горючем, раскалённом или расплавленном виде, пожарная опасность которых связана с выделением лучистого тепла и образованием искр и пламени, а также производство, связанное с сжиганием твёрдого, жидкого и газообразного топлива. </li>
+<li>Д. Процесс получения, хранения и применения несгораемых веществ и материалов в холодном виде.</li>
+</ul>
+
+<hr/>
+
+</div></body>
+
+</html>
