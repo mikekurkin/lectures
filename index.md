@@ -5,5 +5,7 @@
 
 [Правоведение](7_legal.html)
 
-[Экономика](7_economics.html)
+[Экономика 7](7_economics.html)
+
+[Экономика 8](8_economics.html)
 
