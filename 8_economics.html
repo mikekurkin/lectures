@@ -900,7 +900,7 @@ pre[class*="language-"].line-numbers > code {
 
 
 </style>
-<script>/* PrismJS 1.14.0
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: "AMS" } }});</script><script>/* PrismJS 1.14.0
 http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+actionscript+ada+apacheconf+apl+applescript+c+arff+asciidoc+asm6502+csharp+autohotkey+autoit+bash+basic+batch+bison+brainfuck+bro+cpp+aspnet+arduino+coffeescript+clojure+ruby+csp+css-extras+d+dart+diff+django+docker+eiffel+elixir+elm+markup-templating+erlang+fsharp+flow+fortran+gedcom+gherkin+git+glsl+go+graphql+groovy+haml+handlebars+haskell+haxe+http+hpkp+hsts+ichigojam+icon+inform7+ini+io+j+java+jolie+json+julia+keyman+kotlin+latex+less+liquid+lisp+livescript+lolcode+lua+makefile+markdown+erb+matlab+mel+mizar+monkey+n4js+nasm+nginx+nim+nix+nsis+objectivec+ocaml+opencl+oz+parigp+parser+pascal+perl+php+php-extras+sql+powershell+processing+prolog+properties+protobuf+pug+puppet+pure+python+q+qore+r+jsx+typescript+renpy+reason+rest+rip+roboconf+crystal+rust+sas+sass+scss+scala+scheme+smalltalk+smarty+plsql+soy+stylus+swift+tcl+textile+twig+tsx+vbnet+velocity+verilog+vhdl+vim+visual-basic+wasm+wiki+xeora+xojo+yaml&plugins=line-numbers */
 var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-([\w-]+)\b/i,t=0,n=_self.Prism={manual:_self.Prism&&_self.Prism.manual,disableWorkerMessageHandler:_self.Prism&&_self.Prism.disableWorkerMessageHandler,util:{encode:function(e){return e instanceof r?new r(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e,t){var r=n.util.type(e);switch(t=t||{},r){case"Object":if(t[n.util.objId(e)])return t[n.util.objId(e)];var a={};t[n.util.objId(e)]=a;for(var l in e)e.hasOwnProperty(l)&&(a[l]=n.util.clone(e[l],t));return a;case"Array":if(t[n.util.objId(e)])return t[n.util.objId(e)];var a=[];return t[n.util.objId(e)]=a,e.forEach(function(e,r){a[r]=n.util.clone(e,t)}),a}return e}},languages:{extend:function(e,t){var r=n.util.clone(n.languages[e]);for(var a in t)r[a]=t[a];return r},insertBefore:function(e,t,r,a){a=a||n.languages;var l=a[e];if(2==arguments.length){r=arguments[1];for(var i in r)r.hasOwnProperty(i)&&(l[i]=r[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in r)r.hasOwnProperty(i)&&(o[i]=r[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===a[e]&&t!=e&&(this[t]=o)}),a[e]=o},DFS:function(e,t,r,a){a=a||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],r||l),"Object"!==n.util.type(e[l])||a[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||a[n.util.objId(e[l])]||(a[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,a)):(a[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,a)))}},plugins:{},highlightAll:function(e,t){n.highlightAllUnder(document,e,t)},highlightAllUnder:function(e,t,r){var a={callback:r,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var l,i=a.elements||e.querySelectorAll(a.selector),o=0;l=i[o++];)n.highlightElement(l,t===!0,a.callback)},highlightElement:function(t,r,a){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1].toLowerCase(),i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,t.parentNode&&(o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l));var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(n.hooks.run("before-sanity-check",u),!u.code||!u.grammar)return u.code&&(n.hooks.run("before-highlight",u),u.element.textContent=u.code,n.hooks.run("after-highlight",u)),n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),r&&_self.Worker){var g=new Worker(n.filename);g.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,a&&a.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},g.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,a&&a.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,a){var l={code:e,grammar:t,language:a};return n.hooks.run("before-tokenize",l),l.tokens=n.tokenize(l.code,l.grammar),n.hooks.run("after-tokenize",l),r.stringify(n.util.encode(l.tokens),l.language)},matchGrammar:function(e,t,r,a,l,i,o){var s=n.Token;for(var u in r)if(r.hasOwnProperty(u)&&r[u]){if(u==o)return;var g=r[u];g="Array"===n.util.type(g)?g:[g];for(var c=0;c<g.length;++c){var h=g[c],f=h.inside,d=!!h.lookbehind,m=!!h.greedy,p=0,y=h.alias;if(m&&!h.pattern.global){var v=h.pattern.toString().match(/[imuy]*$/)[0];h.pattern=RegExp(h.pattern.source,v+"g")}h=h.pattern||h;for(var b=a,k=l;b<t.length;k+=t[b].length,++b){var w=t[b];if(t.length>e.length)return;if(!(w instanceof s)){if(m&&b!=t.length-1){h.lastIndex=k;var _=h.exec(e);if(!_)break;for(var j=_.index+(d?_[1].length:0),P=_.index+_[0].length,A=b,x=k,O=t.length;O>A&&(P>x||!t[A].type&&!t[A-1].greedy);++A)x+=t[A].length,j>=x&&(++b,k=x);if(t[b]instanceof s)continue;I=A-b,w=e.slice(k,x),_.index-=k}else{h.lastIndex=0;var _=h.exec(w),I=1}if(_){d&&(p=_[1]?_[1].length:0);var j=_.index+p,_=_[0].slice(p),P=j+_.length,N=w.slice(0,j),S=w.slice(P),C=[b,I];N&&(++b,k+=N.length,C.push(N));var E=new s(u,f?n.tokenize(_,f):_,y,_,m);if(C.push(E),S&&C.push(S),Array.prototype.splice.apply(t,C),1!=I&&n.matchGrammar(e,t,r,b,k,!0,u),i)break}else if(i)break}}}}},tokenize:function(e,t){var r=[e],a=t.rest;if(a){for(var l in a)t[l]=a[l];delete t.rest}return n.matchGrammar(e,r,t,0,0,!1),r},hooks:{all:{},add:function(e,t){var r=n.hooks.all;r[e]=r[e]||[],r[e].push(t)},run:function(e,t){var r=n.hooks.all[e];if(r&&r.length)for(var a,l=0;a=r[l++];)a(t)}}},r=n.Token=function(e,t,n,r,a){this.type=e,this.content=t,this.alias=n,this.length=0|(r||"").length,this.greedy=!!a};if(r.stringify=function(e,t,a){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return r.stringify(n,t,e)}).join("");var l={type:e.type,content:r.stringify(e.content,t,a),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:a};if(e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o=Object.keys(l.attributes).map(function(e){return e+'="'+(l.attributes[e]||"").replace(/"/g,"&quot;")+'"'}).join(" ");return"<"+l.tag+' class="'+l.classes.join(" ")+'"'+(o?" "+o:"")+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(n.disableWorkerMessageHandler||_self.addEventListener("message",function(e){var t=JSON.parse(e.data),r=t.language,a=t.code,l=t.immediateClose;_self.postMessage(n.highlight(a,n.languages[r],r)),l&&_self.close()},!1),_self.Prism):_self.Prism;var a=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return a&&(n.filename=a.src,n.manual||a.hasAttribute("data-manual")||("loading"!==document.readyState?window.requestAnimationFrame?window.requestAnimationFrame(n.highlightAll):window.setTimeout(n.highlightAll,16):document.addEventListener("DOMContentLoaded",n.highlightAll))),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
 Prism.languages.markup={comment:/<!--[\s\S]*?-->/,prolog:/<\?[\s\S]+?\?>/,doctype:/<!DOCTYPE[\s\S]+?>/i,cdata:/<!\[CDATA\[[\s\S]*?]]>/i,tag:{pattern:/<\/?(?!\d)[^\s>\/=$<%]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+))?)*\s*\/?>/i,greedy:!0,inside:{tag:{pattern:/^<\/?[^\s>\/]+/i,inside:{punctuation:/^<\/?/,namespace:/^[^\s>\/:]+:/}},"attr-value":{pattern:/=(?:("|')(?:\\[\s\S]|(?!\1)[^\\])*\1|[^\s'">=]+)/i,inside:{punctuation:[/^=/,{pattern:/(^|[^\\])["']/,lookbehind:!0}]}},punctuation:/\/?>/,"attr-name":{pattern:/[^\s>\/]+/,inside:{namespace:/^[^\s>\/:]+:/}}}},entity:/&#?[\da-z]{1,8};/i},Prism.languages.markup.tag.inside["attr-value"].inside.entity=Prism.languages.markup.entity,Prism.hooks.add("wrap",function(a){"entity"===a.type&&(a.attributes.title=a.content.replace(/&amp;/,"&"))}),Prism.languages.xml=Prism.languages.markup,Prism.languages.html=Prism.languages.markup,Prism.languages.mathml=Prism.languages.markup,Prism.languages.svg=Prism.languages.markup;
@@ -1076,6 +1076,23 @@ Prism.languages.yaml={scalar:{pattern:/([\-:]\s*(?:![^\s]+)?[ \t]*[|>])[ \t]*(?:
 </li>
 </ul>
 </li>
+<li>
+<a href="#toc_5">Основные фонды промышленного предприятия</a>
+<ul>
+<li>
+<a href="#toc_6">Понятие основных фондов и их структура</a>
+</li>
+<li>
+<a href="#toc_7">Виды стоимостной оценки основных производственных фондов предприятия</a>
+</li>
+<li>
+<a href="#toc_8">Износ основных производственных фондов</a>
+</li>
+<li>
+<a href="#toc_9">Амортизация основных производственных фондов</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1172,6 +1189,80 @@ Prism.languages.yaml={scalar:{pattern:/([\-:]\s*(?:![^\s]+)?[ \t]*[|>])[ \t]*(?:
 <p>По другим: </p>
 
 <p>!</p>
+
+<hr/>
+
+<h3 id="toc_5">Основные фонды промышленного предприятия</h3>
+
+<h4 id="toc_6">Понятие основных фондов и их структура</h4>
+
+<p>Средства производства, выраженные в денежной форме, называются <strong>производственные фонды предприятия</strong>, основные и оборотные. При этом в вещественном виде <em>основные производственные фонды</em> выступают как средство труда, а <em>оборотные производственные фонды</em> — как предмет труда</p>
+
+<p><strong>Основные производственные фонды</strong> (ОПФ) — это совокупность средств труда, многократно участвующих в производственном процессе и переносящих свою стоимость на себестоимость готовой продукции с целью реновации (обновления).</p>
+
+<p>Для ведения бухгалтерского учёта применяются <strong>положения по бухгалтерскому учёту</strong> (ПБУ). Согласно ПБУ 6/01 «Учёт основных средств», активы предприятия будут учитываться в качестве основных средств, если выполняют следующие условия:</p>
+
+<ul>
+<li>объект предназначен для использования в производстве продукции, при выполнении работ или оказании услуг, для управленческих нужд организации, либо для предоставлении организации за плату во временное владение и пользование</li>
+<li>объект предназначен для использования в течении длительного времени, то есть, срока продолжительностью свыше 12 месяцев или обычного операционного цикла, если он превышает 12 месяцев</li>
+<li>организация не предполагает последующую перепродажу данного объекта</li>
+<li>объект способен приносить организации экономические выгоды (доход) в будущем</li>
+</ul>
+
+<p>Выделяют следующие группы и подгруппы основных производственных фондов на машиностроительных предприятиях:</p>
+
+<ul>
+<li>Здания: цеха, складские помещения, производственные лаборатории и др.</li>
+<li>Сооружения: эстакады, тоннели, дороги и др.</li>
+<li>Передаточные устройства: электросети, теплосети, трубы и др.</li>
+<li>Машины и оборудование: силовые машины, рабочие машины, измерительные и регулирующие приборы и устройства и др.</li>
+<li>Транспортные средства: автомобили, кары, тележки и др.</li>
+<li>Инструмент и технологическая оснастка долговременного пользования</li>
+<li>Производственный инвентарь и принадлежности: рабочие столы, верстаки, тара, стеллажи и др.</li>
+<li>Хозяйственный инвентарь: шкафы, вешалки, сейфы и др.</li>
+</ul>
+
+<p>В структуре основных фондов, в зависимости от конкретной их роли, принято выделять активную и пассивную часть. К <em>активной</em> части основных фондов относятся те, которые непосредственно участвуют в процессе производства — оборудование и инструменты. К <em>пассивной</em> части относятся основные фонды, которые создают условия для нормального течения производственных процессов: здания, сооружения и т. д.</p>
+
+<h4 id="toc_7">Виды стоимостной оценки основных производственных фондов предприятия</h4>
+
+<p>Существуют следующие виды стоимостной оценки основных фондов:</p>
+
+<ol>
+<li><em>Оценка по первоначальной стоимости</em>, то есть по фактическим затратам, произведённым в момент создания или приобретения, включая доставку, монтаж, в ценах того года, в котором они изготовлены или приобретены. Первоначальная стоимость основных средств может меняться в случаях достройки, дооборудования, реконструкции, модернизации, технического перевооружения, частичной ликвидации соответствующих объектов и по иным аналогичным основаниям (п. 2, ст. 257 НК РФ).</li>
+<li><em>Оценка по восстановительной стоимости</em>, то есть по стоимости воспроизводства основных фондов на момент переоценки. Эта стоимость показывает, во сколько обошлось бы создание или приобретение на данный момент ранее созданных или приобретённых основных фондов.</li>
+<li><em>Остаточная стоимость основных фондов</em>, которая рассчитывается как первоначальная (или восстановительная) стоимость за вычетом начисленного износа (амортизационные отчисления): \[С_{ост} = С_{пер \, (вос)} - A_м\]</li>
+<li><em>Среднегодовая стоимость основных фондов</em>, которая рассчитывается при движении ОПФ (убытие, покупка, создание) по следующей формуле: \[С_{ср.год.} = С_{н.г.} + С_{вв.} \frac{n_1}{12} - С_{выб.} \frac{n_2}{12},\] где \(С_{н.г.}\) — стоимость на начало года; \(С_{вв.}\) — стоимость введённых фондов; \(С_{выб.}\) — стоимость выбывших фондов; \(n_1\) и \(n_2\) — количество <u>полных</u> месяцев до конца года введённых и выбывших фондов соответственно.</li>
+<li><em>Ликвидационная стоимость</em> — стоимость реализации изношенных и снятых с производства основных фондов (стоимость металлолома).</li>
+</ol>
+
+<h4 id="toc_8">Износ основных производственных фондов</h4>
+
+<p>Существует два вида износа — <em>физический</em> и <em>моральный</em>.</p>
+
+<p><strong>Физический износ</strong> — утрата основными фондами своих технических параметров. Различают физический износ <em>эксплуатационный</em> и <em>естественный</em>. </p>
+
+<p><strong>Моральный износ</strong>, сущность которого состоит в том, что средства труда обесцениваются, утрачивают стоимость до окончания срока своей физической службы. Моральный износ бывает двух видов:<br/>
+<em>Первого вида</em> — обесценивание машин той же конструкции, что выпускались и раньше вследствие удешевления их производства в современных условия. Рассчитывается по следующей формуле: \[МИ_1 = \frac{С_{пер} - С_{вос}}{С_{пер}}\]<br/>
+<em>Второго вида</em> — отражает снижение эффективности использования существующего оборудования вследствие появления новых, более прогрессивных, производительных и экономичных конструкций машин. Рассчитывается по формуле: \[МИ_2 = [1 - (\frac{C_{пер.н.}}{Q_н \cdot T_н} | \frac{С_{пер.б.}}{Q_б \cdot T_б})],\] где \(C_{пер.н.}\), \(С_{пер.б.}\) — стоимость морально устаревшей новой и базовой машины, \(Q_н\), \(Q_б\) — производительность морально устаревшей новой и базовой, \(T_н\), \(T_б\) — срок службы морально устаревшей базовой и новой.</p>
+
+<h4 id="toc_9">Амортизация основных производственных фондов</h4>
+
+<p><strong>Амортизация</strong> — это постепенное перенесение стоимости основных производственных фондов на себестоимость продукции в целях накопления денежных средств для их восстановления и реновации. Денежным выражением размера амортизации являются амортизационные отчисления, которые соответствуют степени износа основных фондов.</p>
+
+<p>Величина амортизационных отчислений выражается в норме амортизации, представляющей собой годовой процент перенесения стоимости основных производственных фондов на себестоимость продукции: \[Н_А = \frac{1}{T} \cdot 100\%,\] где \(T\) — срок полезного использования амортизируемого имущества.</p>
+
+<p><strong>Срок полезного использования</strong> — период, в течении которого объект основных средств служит для выполнения целей деятельности предприятия.</p>
+
+<p>Для тех видов основных средств, которые не указаны в амортизационных группах, срок полезного использования устанавливается бухгалтером самостоятельно, основываясь на следующих данных:</p>
+
+<ul>
+<li>ожидаемый срок использования этого объекта в соответствии с производительностью или мощностью</li>
+<li>ожидаемый физический износ, зависящий от режима эксплуатации, естественных условий и влияния агрессивной среды, системы проведения ремонта</li>
+<li>нормативно-правовых и других ограничений использования этого объекта.</li>
+</ul>
+
+<p>Постановление правительства РФ от 01.01.2002 №1 в редакции от 07.07.2016 «О классификации основных средств, включаемых в амортизационные группы»: Срок полезного использования определяется бухгалтером самостоятельно на дату ввода в эксплуатацию данного объекта амортизируемого имущества с учётом классификации основных средств.</p>
 
 <hr/>
 
