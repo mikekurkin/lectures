@@ -1,11 +1,16 @@
 # Index of /lectures/
 
+### 3 курс
 
-[БЖД](7_bzd.html)
+[БЖД (Никулина)](7_bzd.html) [\\(^{[.md]}\\)](7_bzd.md)
 
-[Правоведение](7_legal.html)
+[Правоведение (Шафигуллина)](7_legal.html) [\\(^{[.md]}\\)](7_legal.md)
 
-[Экономика 7](7_economics.html)
+[Экономика (Сапегина)](7_economics.html) [\\(^{[.md]}\\)](7_economics.md)
 
-[Экономика 8](8_economics.html)
+
+### 4 курс
+
+[Экономика (Челенко)](8_economics.html) [\\(^{[.md]}\\)](8_economics.md)
+
 
